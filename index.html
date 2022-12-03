@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- *Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- *Css------------------------------------------- -->
+  <link rel="stylesheet" href="/dist/css/style.css">
+  <!-- *Js------------------------------------------- -->
+  <script defer src="/dist/js/script.js"></script>
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+</head>
+
+<body>
+  <!-- *============================ Header =========================== -->
+  <header class="header container">
+
+    <!-- *============================ Title =========================== -->
+    <div class="header__title">
+      <h1>Social Media Dashboard</h1>
+      <span class="header__subtitle">Total Followers: 23,004</span>
+    </div>
+    <!-- *============================ Title Ends =========================== -->
+
+    <hr>
+    <!-- *============================ Toggle =========================== -->
+    <fieldset class="header__toggle toggle" aria-label="theme toggle" role="radiogroup">
+
+      <label id="darklabel" for="dark" class="label ">Dark Mode</label>
+      <label id="lightlabel" for="light" class="label ">Light Mode</label>
+      <span class="toggle__wrapper">
+        <input type="radio" name="theme" id="dark" checked>
+        <input type="radio" name="theme" id="light">
+        <span aria-hidden="true" class="toggle__background"></span>
+        <span aria-hidden="true" class="toggle__button"></span>
+      </span>
+
+    </fieldset>
+    <!-- *============================ Toggle Ends =========================== -->
+
+
+  </header>
+  <!-- *============================ Header Ends =========================== -->
+
+  <!-- *============================ Main =========================== -->
+  <main>
+    <!-- *============================ Card Big  =========================== -->
+    <section class="cards container">
+      <div class="cards__wrapper">
+
+        <!-- *Card -->
+        <article class="card card--big card--facebook">
+          <!-- *Platform Container -->
+          <div class="card__platform-container">
+            <img src="images/icon-facebook.svg" alt="platform-icon" class="card__icon">
+            <h3 class="card__username"> <a href="https://github.com/maxjn">@nathanf</a></h3>
+          </div>
+          <!-- *Platform Container -->
+          <div class="card__count-container">
+            <span class="card__count card__count--big">1987</span>
+            <span class="card__label">Followers</span>
+          </div>
+          <!-- *Change -->
+          <p class="card__change card__change--up"> 12 Today</p>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--big card--twitter">
+          <!-- *Platform Container -->
+          <div class="card__platform-container">
+            <img src="images/icon-twitter.svg" alt="platform-icon" class="card__icon">
+            <h3 class="card__username"> <a href="https://github.com/maxjn">@nathanf</a></h3>
+          </div>
+          <!-- *Platform Container -->
+          <div class="card__count-container">
+            <span class="card__count card__count--big">1044</span>
+            <span class="card__label">Followers</span>
+          </div>
+          <!-- *Change -->
+          <p class="card__change card__change--up"> 99 Today</p>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--big card--instgram">
+          <!-- *Platform Container -->
+          <div class="card__platform-container">
+            <img src="images/icon-instagram.svg" alt="platform-icon" class="card__icon">
+            <h3 class="card__username"> <a href="https://github.com/maxjn"> @realnathanf</a></h3>
+          </div>
+          <!-- *Platform Container -->
+          <div class="card__count-container">
+            <span class="card__count card__count--big">11k</span>
+            <span class="card__label">Followers</span>
+          </div>
+          <!-- *Change -->
+          <p class="card__change card__change--up"> 1099 Today</p>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--big card--youtbe">
+          <!-- *Platform Container -->
+          <div class="card__platform-container">
+            <img src="images/icon-youtube.svg" alt="platform-icon" class="card__icon">
+            <h3 class="card__username"> <a href="https://github.com/maxjn"> Nathan F.</a></h3>
+          </div>
+          <!-- *Platform Container -->
+          <div class="card__count-container">
+            <span class="card__count card__count--big">8239</span>
+            <span class="card__label">Subscribers</span>
+          </div>
+          <!-- *Change -->
+          <p class="card__change card__change--up"> 144 Today</p>
+        </article>
+      </div>
+    </section>
+    <!-- *============================ Card Big Ends  =========================== -->
+
+    <!-- *============================ Card Small  =========================== -->
+    <section class="cards container">
+      <h2 class="cards__title">Overview-Today</h2>
+      <div class="cards__wrapper">
+        <!-- *Card -->
+        <article class="card card--small">
+          <!-- *Top container -->
+          <div class="card__top-container">
+            <h3 class="card__meta">Page Views</h3>
+            <img src="images/icon-facebook.svg" alt="platform-icon" class="card__icon">
+          </div>
+          <!-- *Bottom container -->
+          <div class="card__bottom-container">
+            <span class="card__count card__count--small">87</span>
+            <p class="card__change card__change--up"> 3%</p>
+          </div>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--small">
+          <!-- *Top container -->
+          <div class="card__top-container">
+            <h3 class="card__meta">Likes</h3>
+            <img src="images/icon-facebook.svg" alt="platform-icon" class="card__icon">
+          </div>
+          <!-- *Bottom container -->
+          <div class="card__bottom-container">
+            <span class="card__count card__count--small">52</span>
+            <p class="card__change card__change--down"> 2%</p>
+          </div>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--small">
+          <!-- *Top container -->
+          <div class="card__top-container">
+            <h3 class="card__meta">Likes</h3>
+            <img src="images/icon-instagram.svg" alt="platform-icon" class="card__icon">
+          </div>
+          <!-- *Bottom container -->
+          <div class="card__bottom-container">
+            <span class="card__count card__count--small">5462</span>
+            <p class="card__change card__change--down"> 2257%</p>
+          </div>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--small">
+          <!-- *Top container -->
+          <div class="card__top-container">
+            <h3 class="card__meta">
+              Profile Views</h3>
+            <img src="images/icon-instagram.svg" alt="platform-icon" class="card__icon">
+          </div>
+          <!-- *Bottom container -->
+          <div class="card__bottom-container">
+            <span class="card__count card__count--small"> 52k</span>
+            <p class="card__change card__change--down"> 1375%</p>
+          </div>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--small">
+          <!-- *Top container -->
+          <div class="card__top-container">
+            <h3 class="card__meta">
+              Retweets</h3>
+            <img src="images/icon-twitter.svg" alt="platform-icon" class="card__icon">
+          </div>
+          <!-- *Bottom container -->
+          <div class="card__bottom-container">
+            <span class="card__count card__count--small"> 117</span>
+            <p class="card__change card__change--down"> 303%</p>
+          </div>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--small">
+          <!-- *Top container -->
+          <div class="card__top-container">
+            <h3 class="card__meta">
+              Likes</h3>
+            <img src="images/icon-twitter.svg" alt="platform-icon" class="card__icon">
+          </div>
+          <!-- *Bottom container -->
+          <div class="card__bottom-container">
+            <span class="card__count card__count--small"> 507</span>
+            <p class="card__change card__change--down"> 553%</p>
+          </div>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--small">
+          <!-- *Top container -->
+          <div class="card__top-container">
+            <h3 class="card__meta">
+              Likes</h3>
+            <img src="images/icon-youtube.svg" alt="platform-icon" class="card__icon">
+          </div>
+          <!-- *Bottom container -->
+          <div class="card__bottom-container">
+            <span class="card__count card__count--small"> 107</span>
+            <p class="card__change card__change--down"> 19%</p>
+          </div>
+        </article>
+
+        <!-- *Card -->
+        <article class="card card--small">
+          <!-- *Top container -->
+          <div class="card__top-container">
+            <h3 class="card__meta">
+              Total Views</h3>
+            <img src="images/icon-youtube.svg" alt="platform-icon" class="card__icon">
+          </div>
+          <!-- *Bottom container -->
+          <div class="card__bottom-container">
+            <span class="card__count card__count--small"> 1407</span>
+            <p class="card__change card__change--down"> 12%</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- *============================ Card Small Ends  =========================== -->
+
+
+  </main>
+  <!-- *============================ Main Ends =========================== -->
+
+
+  <!-- *============================ Footer =========================== -->
+  <footer class="footer container">
+    <div class="footer__copyright">
+      Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a class="footer__link" href="https://github.com/maxjn">Maxjn[Muhammad Haghnegahdar]</a>.
+    </div>
+  </footer>
+  <!-- *============================ Footer Ends =========================== -->
+
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+//Border Top https://codepen.io/ananyaneogi/pen/mdPbJZO
+@use "../util" as *;
+
+.cards {
+  &__title {
+    margin: inherit 0 rem(25) 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: rem(25);
+    grid-template-columns: 1fr;
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint(medium1) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  background-color: var(--card-bg);
+  color: var(--text-color2);
+  height: rem(190);
+  padding: rem(25);
+  transition: background 150ms ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  //*Top Line - Card Big
+  &--big {
+    border-radius: 0 0 rem(6) rem(6);
+    border-top: rem(5.5) solid transparent;
+    position: relative;
+    /*The background extends to the outside edge of the padding. No background is drawn beneath the border.*/
+    background-clip: padding-box;
+  }
+
+  //*Top Line
+  &::before {
+    content: "";
+    position: absolute;
+    top: rem(-4);
+    right: 0;
+    bottom: 90%;
+    left: 0;
+    z-index: -1;
+    border-radius: rem(6); /* inherit container box's radius */
+  }
+  //*Top Line Color
+  &--facebook {
+    &:before {
+      background: var(--facebook);
+    }
+  }
+  &--instgram {
+    &:before {
+      background: linear-gradient(
+        225deg,
+        var(--instagram-end),
+        var(--instagram-middle) 50.91%,
+        var(--instagram-start) 100%
+      );
+    }
+  }
+  &--twitter {
+    &:before {
+      background: var(--twitter);
+    }
+  }
+  &--youtbe {
+    &:before {
+      background: var(--youtube);
+    }
+  }
+  //*Platform
+  &__platform-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(7);
+  }
+
+  &__icon {
+    max-width: rem(20);
+    min-width: rem(20);
+  }
+  &__username {
+    font-size: rem(13);
+    margin: 0;
+    a {
+      color: var(--text-color2);
+
+      &:hover {
+        color: var(--text-color);
+      }
+    }
+  }
+  //*Count
+  &__count-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__count {
+    color: var(--text-color);
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    &--small {
+      font-size: rem(25);
+    }
+    &--big {
+      font-size: rem(50);
+    }
+  }
+  &__label {
+    letter-spacing: rem(5);
+    text-transform: uppercase;
+    font-size: rem(12);
+  }
+  //*Change
+  &__change {
+    font-size: rem(12);
+    margin: 0;
+    &::before {
+      content: "";
+      width: rem(8);
+      height: rem(4);
+      display: inline-block;
+      background-repeat: no-repeat;
+    }
+    &--up {
+      color: var(--limegreen);
+      &::before {
+        background-image: url(../../../images/icon-up.svg);
+      }
+    }
+    &--down {
+      color: var(--brightred);
+      &::before {
+        background-image: url(../../../images/icon-down.svg);
+      }
+    }
+  }
+  //*Card Skmall
+  &--small {
+    height: rem(120);
+    border-radius: rem(6);
+  }
+
+  &__top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &__meta {
+    font-size: rem(15);
+    margin-top: 0;
+  }
+  &__bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: var(--card-hover);
+    cursor: pointer;
+  }
+}
